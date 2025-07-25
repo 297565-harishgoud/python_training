@@ -70,3 +70,4 @@ Q10) WAP to extract 'Bengaluru' in reverse order using negative indexing from fo
 '''
 s2 = 'Hello I am going to Bengaluru How are you doing?'
 print(s2[-28:-19])
+print(s2[-20:-29:-1]) #reverse
