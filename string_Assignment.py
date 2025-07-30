@@ -7,7 +7,7 @@
 #  immutable means content can not be modified  
 #    Example:- srings,tuples, Dictionary keys
 
-#  we can change the strings if once we assign. insted concatenate and update object.
+#  we can not change the strings if once we assign. insted concatenate and update object.
 #  in background in string classes it will create a new object
 
 ''''
