@@ -77,22 +77,22 @@ print(string)
 '''
 def StrToSubstring(string)->list:
     settemp = set() 
-    strtemp = ""
+
     strlist = []
     i=0
     while(i<len(string)):
-        if string[i] not in settemp:
-            settemp.add(string[i])
-            strtemp +=string[i]
-        else:
-            i=i-1
-            strlist.append(strtemp)
-            strtemp = ""
-            settemp.clear()
-            
-        if len(strtemp) == len(string):
-            strlist.append(strtemp)
-            break
+        strtemp = ""
+        for j in range(i,len(string)):
+            if string[j] not in settemp:
+                settemp.add(string[j])
+                strtemp +=string[j]
+            else:
+                strlist.append(strtemp)
+                settemp.clear()
+                break
+            if len(strtemp) == len(string):
+                strlist.append(strtemp)
+                break
         i=i+1
         
     return strlist
@@ -100,9 +100,9 @@ def StrToSubstring(string)->list:
 
 string  = "Testing strinstr"
 strlist = StrToSubstring(string)
-
 maxlen=0
 subset=""
+
 for li in strlist:
     if maxlen < len(li):
         maxlen = len(li)
